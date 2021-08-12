@@ -1,0 +1,71 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap');
+
+body{text-align:center;
+    font-family: 'Oswald', sans-serif;
+}
+#cards, #cards2, #cards3 {
+    width: 280px;
+    height: 750px;
+    margin:20px;
+    background-color: white;
+}
+#three{
+    display: flex;
+    justify-content:center;
+    background: linear-gradient(to right,#99e4ee, #023e46); ;
+}
+
+#dogs, #toys, #bull {width: 280px;
+    height: 420px;
+}
+
+#dogs img:nth-child(2), #toys img:nth-child(2), #bull img:nth-child(2) {
+    position: relative;
+    top: -90px;
+    left: -40px;
+    /* display: none; */
+    visibility: visible;
+    opacity:1;
+}
+
+#dogs img:nth-child(3), #toys img:nth-child(3), #bull img:nth-child(3) {
+    position: relative;
+    top: -310px;
+    left: -40px;
+}
+
+#name, #name2, #name3 {    width: 280px;
+    height: 75px;
+    font-size: 29px;
+    line-height: 1;
+}
+
+p {font-size:20pt;
+    color:#616161;
+    line-height:1;
+}
+
+#value, #value2, #value3 {
+font-size:30pt;
+font-weight: 600;}
+
+    .star{color: #616161;
+    font-size: 30px;
+    text-decoration: none;
+    }
+
+    .stars {
+    height: 45px;
+    }
+
+    .star:hover,
+    .star:hover ~ .star {
+     color: yellow;
+    }
+ 
+    .btn img {
+            height:70px;
+        }
+
+

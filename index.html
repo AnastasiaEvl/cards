@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+ <body>
+<div id="three">
+    <div id="cards"> </div>
+    <div id="cards2"> </div>
+    <div id="cards3"> </div>
+</div>
+
+    <script>
+
+        let card = {
+            file: "dogs.png", 
+            type: "3D.png",
+            sale: "sale.png",
+            cardName1: "Тайная жизнь",
+            cardName2: "домашних животных 2",
+            price: 17,
+            currency: "руб.",
+            act: true,
+            rating: 3,
+            buy: "button.png"
+
+        }
+
+        //Полная стоимость
+        let fullPrice = `${card.price},00 ${card.currency}`;
+        console.log(fullPrice)
+
+        let salePrice = `${Math.round(card.price*0.9)},00 ${card.currency}`;
+        console.log(salePrice)
+
+        let stars="";
+        for (i=1; i<card.rating; i++){
+            stars+=`<a href='#' class='star'>&#9733;</a>`;
+        }
+
+        stars+=`<a href='#' class='star'>&#9733;</a>`;
+        console.log (stars);
+        
+        let k = '';
+        
+if (card.act){
+    k=`${salePrice} <del style="font-size: 16px"><del style="color:#616161"><del style="font-size: 18pt">${fullPrice}</del> `
+}else {
+k=`${fullPrice}`};
+
+        let s =`
+
+<div id="dogs"><img src="images/${card.file}"><img id="sale" src="images/${card.sale}"><img id="type" src= "images/${card.type}"></div>
+
+
+<div id="name">
+<p><b>${card.cardName1} <br>${card.cardName2}</b></p>
+</div>
+
+<div id="value">${k}</div>
+
+<div dir="rtl" class="stars">
+
+    ${stars}
+
+
+</div>
+
+<div class="btn">
+    <button><img src="images/${card.buy}"></button>
+
+</div> `
+
+
+cards.innerHTML=s;
+
+if(card.act) {
+    sale.style.visibility= "visible";
+    type.style.visibility="visible";
+}else {
+    sale.style.visibility= "hidden";
+    type.style.visibility="hidden";
+}
+    
+
+//карточка 2
+
+let card2 = {
+            file2: "toy4.jpg", 
+            type2: "3D.png",
+            sale2: "sale.png",
+            cardName1: "История игрушек 4",
+            cardName2: "Прикоючения Вилкинса",
+            price: 60,
+            currency: "руб.",
+            act2: true,
+            rating: 2,
+            buy: "button.png"
+
+        }
+
+        //Полная стоимость
+        let fullPrice2 = `${card2.price},00 ${card2.currency}`;
+        console.log(fullPrice2)
+
+        let salePrice2 = `${Math.round(card2.price*0.9)},00 ${card2.currency}`;
+        console.log(salePrice2)
+
+        let stars2="";
+        for (p=1; p < card2.rating; p++){
+            stars2+=`<a href='#' class='star'>&#9733;</a>`;
+        }
+
+        stars2+=`<a href='#' class='star'>&#9733;</a>`;
+        console.log (stars2);
+        
+        let m = '';
+        
+        if (card2.act2){
+            m=`${salePrice2} <del style="font-size: 16px"><del style="color:#616161"><del style="font-size: 17pt">${fullPrice2} </del> `
+        }else {
+            m=`${fullPrice2}`};
+
+        let n =`
+        <div id="toys"><img src="images/${card2.file2}"><img id="sale2" src="images/${card2.sale2}"><img id="type2" src="images/${card2.type2}"></div>
+        
+        <div id="name2">
+        <p><b>${card2.cardName1} <br>${card2.cardName2}</b></p>
+        </div>
+    
+        <div id="value2">${m}</div>
+    
+        <div dir="rtl" class="stars">${stars2}</div>
+    
+        <div class="btn">
+            <button><img src="images/${card2.buy}"></button>
+    
+        </div>  `
+
+ cards2.innerHTML=n;
+
+        if(card2.act2) {
+            sale2.style.visibility = "visible";
+            
+        } else {
+            sale2.style.visibility= "hidden";
+            type2.style.visibility="hidden";
+        }
+
+
+    //карточка 3
+
+    let card3 = {
+            file3: "ferd.jpg", 
+            type3: "3D.png",
+            sale3: "sale.png",
+            cardName1: "Фердинанд",
+            cardName2: "Побег из коровника",
+            price: 80,
+            currency: "руб.",
+            act3: true,
+            rating: 2,
+            buy: "button.png"
+
+    }
+
+    let fullPrice3 = `${card3.price},00 ${card3.currency}`;
+    let salePrice3 = `${Math.round(card3.price*0.9)},00 ${card3.currency}`;
+  
+
+    let stars3="";
+        for (w=1; w < card3.rating; w++){
+            stars3+=`<a href='#' class='star'>&#9733;</a>`;
+        }
+
+        stars3+=`<a href='#' class='star'>&#9733;</a>`;
+        
+        let z = '';
+        
+        if (card3.act3){
+            z=`${salePrice3} <del style="font-size: 16px"> <del style="color:#616161"><del style="font-size: 18pt">${fullPrice3} </del> `
+        }else {
+            z=`${fullPrice3}`};
+
+        let c =`
+        <div id="bull"><img src="images/${card3.file3}"><img id="sale3" src="images/${card3.sale3}"><img id="type3" src="images/${card3.type3}"></div>
+        
+        <div id="name3">
+        <p><b>${card3.cardName1} <br>${card3.cardName2}</b></p>
+        </div>
+    
+        <div id="value2">${z}</div>
+    
+        <div dir="rtl" class="stars">${stars3}</div>
+    
+        <div class="btn">
+            <button><img src="images/${card3.buy}"></button>
+    
+        </div>  `
+
+
+        cards3.innerHTML=c;
+
+        if(card3.act3) {
+            sale3.style.visibility = "visible";
+            
+        } else {
+            sale3.style.visibility= "hidden";
+            type3.style.visibility="hidden";
+        }
+
+
+
+ </script>
+</body>
+</html>
